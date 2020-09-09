@@ -13,21 +13,21 @@ export class ItemsService {
 
   /**
    * Permit to search some words inside answers and questions.
-   * @param word
+   * @param words
    */
-  searchItems(word: string): Item[] {
+  searchItems(words: string): Item[] {
     const matchAnswers = ALL_ITEMS.filter(item =>
       item.answer
         .trim()
         .toLowerCase()
-        .includes(word.trim().toLowerCase()),
+        .includes(words.trim().toLowerCase()),
     );
 
     const matchQuestions = ALL_ITEMS.filter(item =>
       item.question
         .trim()
         .toLowerCase()
-        .includes(word.trim().toLowerCase()),
+        .includes(words.trim().toLowerCase()),
     );
 
     return [...matchAnswers, ...matchQuestions];
