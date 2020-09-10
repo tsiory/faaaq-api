@@ -10,10 +10,4 @@ export class Item {
     description: 'Answer of the question.',
   })
   answer: string;
-
-  @ApiProperty({
-    description:
-      'Flag that indicate if we collapse or not the view in front-end.',
-  })
-  open: boolean;
 }
